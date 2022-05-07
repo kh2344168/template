@@ -1,0 +1,173 @@
+:root{
+  --main-color:#FECE1A;
+  --mask-color:#fecd1acc;
+  --background:#181A1C;
+  --balck:#000;
+  --white:#fff;
+  --transition:.3s;
+}
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  /* background-color: var(--main-color); */
+}
+/* golopl */
+html{
+  font-size: 15px;
+  scroll-behavior: smooth;
+  font-family: sans-serif;
+
+}
+/* width */
+::-webkit-scrollbar {
+  width: 5px;
+}
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: rgba(0, 0, 0, 0.658);
+  border-radius: 10px;
+  transition: .2s;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  width: 10px;
+  background: rgb(255, 208, 0);
+}
+body{
+  background-color: var(--background);
+  color: white;
+}
+ul{
+  list-style: none;
+}
+a{
+  text-decoration: none;
+  color: var(--white);
+}
+.container{
+  width: 90%;
+  margin: auto;
+  overflow: hidden;
+}
+.scale{
+  animation: scale 1s ease-in-out;
+}
+@keyframes scale {
+  0%{transform: scale(1);}
+  50%{transform: scale(0);}
+  75%{transform: scale(1.2);}
+  100%{transform: scale(1);}
+}
+
+/* golopl */
+.triangle{
+  content: "";
+  border: 2rem solid var(--background);
+  position: relative;
+  top:0 ;
+  width: 0;
+  height: 0;
+  border-bottom: 0;
+  border-left: 600px outset transparent;
+  border-right: 600px outset transparent;
+  z-index: 1000;
+  display: block;
+  margin: auto;
+  animation: fadeInDown 1s;
+  opacity: 0;
+  transform: translateY(-20px);
+}
+.triangle.yellow{
+  content: "";
+  border: 2rem solid var(--main-color);
+  position: relative;
+  top:0 ;
+  width: 0;
+  height: 0;
+  border-bottom: 0;
+  border-left: 600px outset transparent;
+  border-right: 600px outset transparent;
+  z-index: 1000;
+  display: block;
+  margin: auto;
+  animation: fadeInDown 1s;
+  opacity: 0;	
+  transform: translateY(-20px);
+
+}
+.triangle_active{
+  transform: translateY(-2px);
+  opacity: 1;
+  transition: 1s;
+  animation: fadeInDown 1s ease-in-out;
+}
+.triangle.yellow.triangle_active{
+  transform: translateY(-1px);
+  opacity: 1;
+  transition: 1s;
+  animation: fadeInDown 1s ease-in-out;
+}
+@media screen and (max-width: 1200px) {
+.triangle.yellow,
+  .triangle{
+  border-left: 470px outset transparent;
+  border-right: 470px outset transparent;
+}
+}
+@media screen and (max-width: 920px) {
+.triangle.yellow,
+  .triangle{
+  border-left: 350px outset transparent;
+  border-right: 350px outset transparent;
+}
+}
+@media screen and (max-width: 750px) {
+.triangle.yellow,
+  .triangle{  
+      border-left: 250px outset transparent;
+      border-right: 250px outset transparent;
+  }
+}
+@media screen and (max-width: 550px) {
+.triangle.yellow,
+  .triangle{
+      top: -1;
+      border-left: 200px outset transparent;
+      border-right: 200px outset transparent;
+  }
+}
+@media screen and (max-width: 400px) {
+.triangle.yellow,
+  .triangle{
+    top: -1;
+      border-left: 140px outset transparent;
+      border-right: 140px outset transparent;
+  }
+}
+@media screen and (max-width: 300px) {
+.triangle.yellow,
+  .triangle{
+      border-left: 100px outset transparent;
+      border-right: 100px outset transparent;
+  }
+}
+@keyframes fadeInDown {
+	0% {
+		opacity: 0;
+		transform: translateY(-20px);
+	}
+	
+	100% {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+

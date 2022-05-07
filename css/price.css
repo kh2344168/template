@@ -1,0 +1,204 @@
+/* =======================START PRICE ==========================  */
+.price{
+  background: var(--main-color);
+}    
+.price .services_title{
+  color: #000;
+  border-color: #000;
+}    
+.price .services_title p{
+  color: rgba(0, 0, 0, 0.753);
+  border-color: #000;
+}    
+.price .price_items{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 1rem;
+}    
+.price .price_items .price_item{ 
+  text-align: center;
+  opacity: 1s;
+  transition: 1s ease-in-out;
+}    
+.price .price_items .price_item.price_item_active{ 
+  opacity: 1;
+}   
+@keyframes fadopsty {
+  0%{opacity: 0;}
+  100%{opacity: 1;}
+}
+.price .price_items .price_item h3{ 
+  height: 7rem;
+  background: var(--balck);
+  padding: 40px 0 0 0;
+  border-radius: 20px 20px 0px 0px;
+  font-size: 2rem;
+  color: var(--main-color);
+}    
+.price .price_items ul{ 
+  display: grid;
+  grid-template-rows: repeat(5 , 5rem);
+  gap: 1rem;
+  justify-items: center;
+  background-color: var(--white);
+  color: var(--balck);
+  border-radius:0 0 20px 20px ;
+}    
+.price .price_items ul li{ 
+  border-bottom: 1px solid var(--balck);
+  padding: 2rem 0 0 0;
+  width: 70%;
+  font-size: 1.5rem;
+  color: rgba(0, 0, 0, 0.712);
+}    
+.price .price_items ul button{ 
+  width: 7rem;
+  height: 3rem;
+  font-size: 1.5rem;
+  color: var(--main-color);
+  background: var(--balck);
+  border: transparent;
+  cursor: pointer;
+}    
+.price .price_items ul button{ 
+  width: 7rem;
+  height: 3rem;
+  font-size: 1.5rem;
+  color: var(--main-color);
+  background: var(--balck);
+  border: transparent;
+  cursor: pointer;
+  transition: var(--transition);
+  text-transform: uppercase;
+}    
+.price .price_items ul button:hover{ 
+  color: var(--balck);
+  background: var(--main-color);
+  text-transform: capitalize;
+}  
+@media screen and (max-width: 970px) {
+  .price .container{
+      width: 90%;
+      margin: auto;
+  }
+
+}  
+@media screen and (max-width: 760px) {
+  .price .container{
+      width: 90%;
+      margin: auto;
+  }
+  .price .price_items{
+      display: grid;
+      grid-template-columns: 1fr ;
+      gap: 1rem;
+  }    
+}  
+.price .contant_us{
+  margin-top: 5rem;
+  text-align: center;
+}
+.price .contant_us p{
+  margin: 2rem 0;
+  font-size: 1.5rem;
+  color: var(--balck);
+}
+.price .contant_us button{
+  width: 10rem;
+  height: 3rem;
+  font-size: 1.2rem;
+  color: var(--balck);
+  background: transparent;
+  border: 1px solid var(--balck);
+  cursor: pointer;
+  transition: var(--transition);
+  text-transform: capitalize;
+
+}
+.price .contant_us button:hover{
+  color: var(--white);
+  background: var(--balck);
+}
+.price .newsletter{
+  background-image: url("./images/brand-bg.png");
+  height: 17rem;
+  margin-top: 3rem;
+  padding-top: 1rem;
+}
+.price .newsletter h3{
+  margin-top: 2rem;
+  font-size: 1.5rem;
+  color: var(--main-color);
+}
+.price .newsletter .newsletter_items{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  border-top: 1px solid var(--balck);
+  padding-top: 3rem;
+  margin-top: 1rem;
+  justify-items: center;
+}
+.price .newsletter .newsletter_item p{
+  width: 80%;
+  font-size: 1.2rem;
+}
+.price .newsletter .newsletter_item input{
+  height: 3rem;
+  width: 25rem;
+  outline: none;
+  padding-left: 1rem;
+  border-radius: 0.2rem;
+  border: none;
+}
+.price .newsletter .newsletter_item button{
+  width: 8rem;
+  height: 3rem;
+  font-size: 1.2rem;
+  color: var(--balck);
+  background: var(--main-color);
+  cursor: pointer;
+  transition: var(--transition);
+  text-transform: capitalize;
+  border: none;
+}
+.price .newsletter .newsletter_item button:hover{
+  color: var(--balck);
+  background: var(--white);   
+  
+}
+@media screen and (max-width: 960px) {
+  .price .newsletter .newsletter_items .newsletter_item{
+      display: grid;
+      grid-template-columns: 1fr ;
+      gap: 2rem;
+      justify-items: center;
+  }
+}  
+@media screen and (max-width: 760px) {
+  .price .container{
+      width: 90%;
+      margin: auto;
+  }
+  .price .newsletter .newsletter_items{
+      display: grid;
+      grid-template-columns: 1fr ;
+      gap: 2rem;
+  }
+  .price .newsletter .newsletter_items .newsletter_item{
+      display: grid;
+      grid-template-columns: 1fr ;
+      gap: 2rem;
+      justify-items: center;
+  }
+}  
+@media screen and (max-width: 560px) {
+  .price .newsletter .newsletter_item input{
+      height: 3rem;
+      width: 15rem;
+      outline: none;
+      padding-left: 1rem;
+      border-radius: 0.2rem;
+      border: none;
+  }
+}  
+/* =======================END PRICE ==========================  */

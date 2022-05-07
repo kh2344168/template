@@ -1,0 +1,231 @@
+
+#landing{
+  height: 35rem;
+
+}
+/* ====================================STAER SWIPER=============================== */
+/* section{
+    margin: -30px 0;
+} */
+
+.swiptr_first .swiper {
+  width: 100%;
+  height: 40rem;
+  background: #000;
+}
+
+
+.swiptr_first .swiper-slide {
+  font-size: 18px;
+  color: rgb(0, 0, 0);
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 40px 60px;
+}
+
+.swiptr_first .parallax-bg {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 130%;
+  height: 100%;
+  -webkit-background-size: cover;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+.swiptr_first .parallax-bg {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 130%;
+  height: 100%;
+  -webkit-background-size: cover;
+  background-size: cover;
+  background-position: center;
+}
+
+.swiptr_first .swiper-slide .title {
+  font-size: 41px;
+  font-weight: 300;
+
+}
+
+.swiptr_first .swiper-slide .subtitle {
+  font-size: 21px;
+}
+
+.swiptr_first .swiper-slide .text {
+  font-size: 14px;
+  width: 400px;
+  line-height: 1.3;
+}
+
+.swiptr_first  .swiper-button-prev,
+.swiptr_first .swiper-button-next{
+    height: 8rem;
+    width: 4rem;
+    display: none;
+    opacity: 1   !important ;
+    display: none;
+}
+.swiptr_first .swiper-button-prev{
+    margin-left: 20px;
+}
+.swiptr_first .swiper-button-next{
+    margin-right: 20px;
+}
+.swiptr_first:hover .swiper-button-prev , .swiptr_first:hover .swiper-button-next
+{
+display: block;
+cursor: pointer;
+}
+
+.swiptr_first .swiper-pagination-clickable .swiper-pagination-bullet{
+    width: 3rem;
+    border-radius: 0;
+    /* background-color: #000; */
+}
+
+.swiptr_first .swiper-pagination-bullet{
+    background-color: rgb(0, 0, 0);
+    height: 4px;
+    opacity: 1 ;
+}
+.swiptr_first .swiper-pagination-bullet-active{
+    background-color: #eee;
+}
+.swiptr_first{
+  position: relative;
+}
+.parallax-bg::after{
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  background-color: var(--mask-color);
+  z-index: 1;
+}
+
+
+/* ============================================END SWIPER============================== */
+
+/* ============================================START EIGHDT SWIPER============================== */
+.swip_items{
+    display: grid;
+    grid-template-columns: 60% 40%;
+}
+.swip_item.text{
+    margin: 6rem;
+    width: 85%;
+    display: grid;
+    grid-template-rows:3rem 3rem 10rem 2rem ;
+}
+.swip_item.text h2{
+    font-size: 2rem;
+    width: 100%;
+    top: 120px;
+    font-weight: bold;
+}
+.swip_item.text h4{
+    font-size: 1.3rem;
+    width: 100%;
+    top: 120px;
+    font-weight:100;
+}
+.swip_item.text p{
+    color: var(--white);
+    font-size: 1rem;
+    text-transform: capitalize;
+}
+.swip_item.text button{
+    display: inline-block;
+    border: 1px solid #181A1C;
+    color: #181A1C;
+    background-color: transparent;
+    padding: 0px 2rem;
+    font-size: 1rem;
+    width: 10rem;
+    height: 4rem;
+    text-transform: capitalize;
+    font-weight: bold;
+    transition: var(--transition);
+    cursor:pointer;
+}
+.swip_item.text button:hover{
+
+    color: var(--white);
+    background-color: var(--balck);
+
+}
+.swip_item.img img{
+    width: 25rem;
+    margin: 10rem 0;
+}
+@media screen and (max-width: 970px) {
+    .swip_item.text h2{
+        font-size: 1.6rem;
+    }
+    .swip_item.text p{
+        width:80% ;
+    }
+    .swip_item.img img{
+        width: 20rem;
+        margin: 10rem 0;
+    }
+    .swiper {
+        height: 38rem;
+      }
+}
+@media screen and (max-width: 750px) {
+
+    .swip_item.text h2{
+        font-size: 1.3rem;
+    }
+    .swip_item.text p{
+        display: none;
+    }
+    .swip_item.img img{
+        width: 16rem;
+        margin: 10rem 0;
+    }
+    .swiper {
+        height: 35rem;
+      }
+}
+@media screen and (max-width: 550px) {
+    .swip_items{
+        display: grid;
+        grid-template-columns: 100%;
+    }
+    .swip_item.text h2{
+        font-size: 1.3rem;
+    }
+    .swip_item.text p{
+        display: none;
+    }
+    .swip_item.img img{
+        display: none;
+    }
+    .swiper {
+        height: 30rem;
+    }
+    .swiptr_first .swiper-slide{
+        padding: 0;
+    }
+    .swiptr_first .swiper {
+        width: 100%;
+        height: 20rem;
+        background: #000;
+    }
+    #landing{
+        height: 20rem;
+    }
+    .swip_item.text button{
+        display: none;
+    }
+}
+
+/* ============================================END EIGHDT SWIPER============================== */

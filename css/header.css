@@ -1,0 +1,89 @@
+.header{
+  position: relative;
+  width: 100%;
+}
+.header.header_active{
+  position: fixed;
+  z-index: 2000000000;
+  animation:fadeInDown  1s ease-in-out;
+}
+.nav{
+  background-color:var(--background);
+}
+.nav .nav_items{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding: 1rem;
+}
+.nav .nav_items .nav_item.logo img{
+  width: 7rem;
+}
+.nav .nav_items .nav_item{
+  display: grid;
+  grid-template-columns: repeat(7 , 1fr);
+  align-content: center;
+}
+
+.nav .nav_items ul li {
+  width: 100%;
+  text-transform: uppercase;
+  padding: .6rem 1rem;
+  border: 2px solid transparent;
+}
+.nav .nav_items ul .active,
+.nav .nav_items ul li:hover{
+  border: 2px solid var(--main-color);
+  transition:1s ;
+}
+.nav .nav_items .nav_item.logo i{
+  display: none;
+}
+@media screen and (max-width: 770px) {
+
+  .nav .nav_items   {  
+      grid-template-columns: 1fr;
+  }
+  .nav .nav_items .nav_item.logo{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  .nav .nav_items .nav_item.logo i{
+    display:inline-block;
+    font-size: 2rem;
+    justify-self: end;
+    font-size: 1.3rem;
+    padding: 8px;
+    background: var(--main-color);
+    color: var(--balck);
+    transition: var(--transition);
+    cursor: pointer;
+  }
+
+
+  .nav .nav_items ul.nav_item{
+    height: 0;
+    margin: 0 0;
+    transition: .5s;
+  }
+  .nav .nav_items ul.nav_item.active{
+    height: 306px;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(7 , 1fr );
+    gap: 1rem;
+    margin: 50px 0;
+  }
+  .nav .nav_items ul.nav_item li{
+    display: none;
+    transition: 1s;
+  }
+  .nav .nav_items ul.nav_item.active li{
+    display: inline-block;
+    animation: opacity 1s;
+  }
+  @keyframes opacity {
+    0%{opacity: 0; width: 0;}
+    100%{opacity: 1;width: 100%;}
+  }
+}
+
+/* ====================================STAER SWIPER=============================== */

@@ -1,0 +1,242 @@
+.about .animation.yellow{
+  border-top-color:var(--main-color);
+  top: 0rem;
+}
+
+.about .container{
+  width: 90%;
+  margin: auto;
+}
+.about .about_items{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  justify-content: space-around;
+  gap: 1rem;
+}
+.about .about_items .about_item{
+  border: 1px solid;
+  padding: 10px;
+  text-align: center;
+  color: var(--main-color);
+  position: relative;
+}
+.about .about_items .active_scale{
+  transform: scale(1);
+  animation: scaleabout 1s ease-in-out;
+}
+@keyframes scaleabout {
+  0%{transform: scale(0);}
+  70%{  transform: scale(1.2);}
+  100%{  transform: scale(1);}
+}
+.about .about_items .about_item img{
+  width: 100%;
+}
+.about .about_items .about_item h3{     
+  margin:1rem 0 ;
+  font-size: 1.5rem;
+}
+.about .about_items .about_item .about_icon i{ 
+  font-size: 2rem;
+  margin: 0 .5rem;
+  border-radius: 50% ;
+  position: relative;
+  z-index: 1000;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.about .about_items .about_item .mask{ 
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  padding: 56px 20px;
+  color: var(--balck);
+  background: var(--mask-color);
+  height: 0%;
+  opacity: 0;
+  transition: var(--transition);
+  z-index: 9;
+  width: 100%;
+}
+.about .about_items .about_item:hover .mask{
+  height: 100%;
+  opacity: 1;
+}
+.about .about_items .about_item:hover .about_icon i{
+  color: var(--white);
+}
+.about .about_items .about_item:hover  h3{
+  color: var(--white);
+  position: relative;
+  z-index: 100;
+}
+.about .about_items .about_item .about_icon i:hover{ 
+  color: #000;
+}
+@media screen and (max-width: 750px) {
+  .about .about_items{
+      display: grid;
+      grid-template-columns: 1fr ;
+      justify-content: space-around;
+      gap: 1rem;
+  }
+}
+
+
+
+/* =========================END ABOUT========================  */
+
+/* =========================START ABOUT_US========================  */
+.about_us{
+  margin-top: 5rem;
+}
+.about_us .services_title{
+  border: none;
+}
+.about_us .services_title h2{
+  color: var(--main-color);
+}
+.about_us .services_title p{
+  color:var(--white);
+  font-size: 1rem;
+}
+.about_us .about_title{
+  color: var(--main-color);
+  margin: 1rem 0;
+  text-transform: capitalize;
+  font-size: 2rem;
+  font-weight: 100;
+}
+.about_contant{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+}
+.about_us .about_us_items{
+  display: grid;
+  grid-template-rows: repeat(4 , 3rem);
+  gap: 1.6rem;
+}
+.about_us .about_us_items .about_us_item{
+  border:1px solid white;
+  width: 100%;
+  height: 3rem;
+  position: relative;
+  background:var(--white) ;
+  z-index: 3;
+
+}
+.about_us .about_us_items .about_us_item span{
+  background-color: var(--main-color);
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  transition: width 1s linear;
+  z-index: 4;
+}
+.about_us .about_us_items .about_us_item h3{
+  position: relative;
+  z-index: 5;
+  top: 30%;
+  left: 5%;
+  color: var(--balck);
+  font-weight: 100;
+  font-size: 1rem;
+}
+.about_us .about_text{
+  text-align: center;
+  background: #fff;
+  color: var(--balck);
+  padding: 0 2rem;
+  height: 100%;
+  padding: 1rem;
+}
+.about_us .about_text h2{
+  margin: 1rem;
+  font-size: 2.5rem;
+  font-weight: 100;
+}
+.about_us .about_text p{
+  margin: 1rem;
+  font-size: 1rem;
+}
+.about_us .about_text button{
+  padding: 1rem 2rem;
+  border: none;
+  cursor: pointer;
+  text-transform: capitalize;
+  font-weight: 700;
+  background: var(--main-color);
+  transition: var(--transition);
+}
+.about_us .about_text button:hover{
+  background: var(--balck);
+  color: var(--main-color);
+}
+.about_us .animation{
+  top: 8rem;
+}
+@media screen and (max-width: 950px) {
+  .about_us .container{
+      width: 90%;
+      margin: auto;
+  }
+}
+@media screen and (max-width: 750px) {
+  .about_us .container{
+      width: 90%;
+      margin: auto;
+  }
+  .about_contant{
+      display: grid;
+      grid-template-columns: 1fr ;
+      gap: 2rem;
+  }
+}
+@media screen and (max-width: 550px) {
+  .about .about_items{
+      display: grid;
+      grid-template-columns: 1fr ;
+      justify-content: space-around;
+      gap: 1rem;
+  }
+}
+
+/* =========================END ABOUT_US========================  */
+/* =======================START ABOUT_cout ==========================  */
+.about_cout{
+  margin: 5rem 0 0 0;
+  background-color: var(--main-color);
+  /* padding: 4rem 0rem 0; */
+}
+.about_cout .about_cout_text{
+  text-align: center;
+  font-size: 2rem;
+  color: var(--balck);
+  padding-top: 4rem;
+  padding-bottom: 5rem;
+}
+.about_cout .about_cout_text button{
+  padding: 1rem 2rem;
+  border: none;
+  cursor: pointer;
+  text-transform: capitalize;
+  font-weight: 700;
+  background: var(--main-color);
+  transition: var(--transition);
+  border: 1px solid var(--balck);
+  /* margin-top: 1rem; */
+  font-size: 2rem;
+}
+.about_cout .about_cout_text button:hover{
+  background: var(--balck);
+  color: var(--main-color);
+}
+.about_cout .animation {
+  top: 3rem;
+  border-top-color:var(--main-color);
+}
+
+/* =======================END ABOUT_cout ==========================  */
